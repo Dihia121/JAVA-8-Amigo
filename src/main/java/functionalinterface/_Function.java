@@ -24,6 +24,14 @@ public class _Function {
 
         //BiFunction  takes 2 argument and produces 1 result
         System.out.println("BiFunction: " + incrementByOneAndMultiplyFunction.apply(5, 100));
+
+        System.out.println("Andthen function: " + incrementByOneFunction.andThen(multiplyByTenFunction)
+                .apply(5)); // here he apply multiplyByTenFunction After incrementByOneFunction
+
+
+        System.out.println("compose function: " + incrementByOneFunction.compose(multiplyByTenFunction)
+                .apply(5)); // here he apply multiplyByTenFunction before incrementByOneFunction
+
     }
 
 
